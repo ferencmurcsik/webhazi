@@ -11,7 +11,7 @@
 	}      
 ?>
 <h1>Üzenetek</h1>
-<h3>hajrá vasas!</h3>
+
 <style>
 	table, td, tr {
 		border: 1px  solid black;
