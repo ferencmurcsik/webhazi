@@ -3,7 +3,7 @@
 		// Kapcsolódás
 		$pdo = new PDO('mysql:host=localhost;dbname=gyakorlat7', 'root', '',array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 		$pdo->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
-		$utasitas = "Select bejelentkezes,uzenet From messages Order by uzenet DESC";
+		$utasitas = "Select bejelentkezes,uzenet,idobelyeg From messages Order by idobelyeg DESC";
 		$eredm = $pdo->query($utasitas);
 	}
 	catch (PDOException $e) {
@@ -18,8 +18,8 @@
 	}
 </style>
 <table>
-	<tr align="center"><td><b>Felhasználó</b></td><td><b>Üzenet</b></td></tr>
+	<tr align="center"><td><b>Felhasználó</b></td><td><b>Üzenet</b></td><td><b>Küldés időpontja</b></td></tr>
 	<?php foreach ($eredm as $sor)
-		print "<tr><td>" . $sor['bejelentkezes'] . "</td>"  . " <td>" .$sor['uzenet'] . "</td></tr>";
+		print "<tr><td>" . $sor['bejelentkezes'] . "</td>"  . " <td>" .$sor['uzenet'] . "</td>"  . " <td>" .$sor['idobelyeg'] ."</td></tr>";
 	?>
 </table>
