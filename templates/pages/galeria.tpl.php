@@ -14,19 +14,14 @@
                 $kepek[$fajl] = filemtime($MAPPA.$fajl);            
         }
     closedir($olvaso);
-    
+
     // Megjelenítés logika:
-?><!DOCTYPE html>
-<html>
-<head>
+?>
     <meta charset="utf-8">
-    <title>Galéria</title>
-    <style type="text/css">
+	<style type="text/css">
         div.kep { display: inline-block; }
         div.kep img { width: 10px; }
     </style>
-</head>
-<body>
     <div id="galeria">
     <h1>Galéria</h1>
     <?php
@@ -73,6 +68,12 @@
 	
     // Megjelenítés logika:
 	?>
+	<?php     
+	$isUserLoggedin = FALSE;
+	if(isset($_SESSION['login'])) { 
+		$isUserLoggedin = TRUE; 
+	}
+	if ($isUserLoggedin) { ?>
     <h1>Feltöltés a galériába:</h1>
 <?php
     if (!empty($uzenet))
@@ -97,6 +98,7 @@
 		-->     
         <input type="submit" name="kuld">
       </form>    
+	<?php } else { ?>
+		<h3>Kép feltöltéshez jelentekezzen be! </h3>
+	<?php } ?>
 
-</body>
-</html>
