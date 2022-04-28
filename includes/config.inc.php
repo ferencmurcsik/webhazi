@@ -6,7 +6,7 @@ $ablakcim = array(
 $fejlec = array(
     'kepforras' => 'logo.png',
     'kepalt' => 'logo',
-	'cim' => 'Ebtelep',
+	'cim' => 'Illatos úti Ebtelep',
 	'motto' => ''
 );
 

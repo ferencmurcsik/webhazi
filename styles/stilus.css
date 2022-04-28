@@ -1,13 +1,13 @@
 header {
     border-radius: 10px;
-    background-color: yellow;
+    background-color: #1a557f;
     padding: 10px;
     margin: 10px;
 }
 
 header img {
     float: left;
-    margin: 20px 10px 0px 10px;
+    margin: 5px 10px 0px 10px;
 }
 
 div#wrapper {
@@ -48,10 +48,9 @@ nav ul a {
 }
 
 div#content {
-    display: table-cell;
     width: 100%;
     border-radius: 10px;
-    background-color: #99FFCC;
+    background-color: grey;
     padding: 15px;
 }
 
