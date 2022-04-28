@@ -19,16 +19,16 @@ function ellenoriz() {
 		}
 	}
 
-	var nev = document.getElementById("nev");
-	if (nev) {
-		if (nev.value.length<5) {
-			rendben = false;
-			nev.style.background = '#f99';
-			fokusz = nev;
-		} else {
-			nev.style.background = '#9f9';
-		}
-	}
+//	var nev = document.getElementById("nev");
+//	if (nev) {
+//		if (nev.value.length<5) {
+//			rendben = false;
+//			nev.style.background = '#f99';
+//			fokusz = nev;
+//		} else {
+//			nev.style.background = '#9f9';
+//		}
+//	}
 
 	if (fokusz) {
 		fokusz.focus();

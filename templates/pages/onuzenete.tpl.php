@@ -3,7 +3,7 @@
 <?php
 	//szerver oldali ellenőrzés példa
 
-	if(!isset($_POST['nev']) || strlen($_POST['nev']) < 5)
+	if(!isset($_POST['nev']) || strlen($_POST['nev']) == 0)
 	{
 		exit("Nem küldött üzenetet");
 	}
