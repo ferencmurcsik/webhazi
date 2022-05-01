@@ -1,7 +1,7 @@
 window.onload = function() {
 	var kuld = document.getElementById("kuld");
 	if (kuld) {
-		kuld.disabled = false;
+		kuld.disabled = true;
 	}
 };
 function ellenoriz() {

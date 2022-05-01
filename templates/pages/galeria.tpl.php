@@ -94,7 +94,7 @@
         <label>Első:
             <input type="file" name="elso" required>
         </label>    
-        <input type="submit" name="kuld">
+        <input type="submit" name="kuld" value="Feltöltés">
       </form>    
 	<?php } else { ?>
 		<h3>Kép feltöltéshez jelentekezzen be! </h3>
