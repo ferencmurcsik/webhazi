@@ -10,7 +10,12 @@
 
 	if(!isset($_POST['szoveg']) || empty($_POST['szoveg']))
 	{
-		exit("Nem küldött üzenetet");
+		exit("Üzenet küldése sikertelen: hiányzó szöveg!");
+	}
+	
+	if(!isset($_POST['szoveg']) || strlen($_POST['szoveg']) > 200)
+	{
+		exit("Szöveg hossza maximum 200 karakter lehet! Az Ön által megadott szöveg hossza: " .strlen($_POST['szoveg']) );
 	}
 
 	echo "Név: " . $_POST["nev"]."<br>";
@@ -18,6 +23,7 @@
 	$uzenet = "";
 	try {
 	// Kapcsolódás
+//		$pdo = new PDO('mysql:host=localhost;dbname=ebtelep', 'ebtelep', '7Pf2Ye3svJYFFMHt',array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 		$pdo = new PDO('mysql:host=localhost;dbname=gyakorlat7', 'root', '',array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 		$pdo->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 		$sqlInsert = "insert into messages(id, bejelentkezes, uzenet, idobelyeg)

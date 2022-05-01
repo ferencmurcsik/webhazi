@@ -1,6 +1,7 @@
 <?php
 	try {
 		// Kapcsolódás
+//		$pdo = new PDO('mysql:host=localhost;dbname=ebtelep', 'ebtelep', '7Pf2Ye3svJYFFMHt',array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 		$pdo = new PDO('mysql:host=localhost;dbname=gyakorlat7', 'root', '',array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 		$pdo->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 		$utasitas = "Select bejelentkezes,uzenet,idobelyeg From messages Order by idobelyeg DESC";
